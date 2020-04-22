@@ -302,7 +302,7 @@
             margin: 10,
             nav: true,
             smartSpeed: 1500,
-            navText: ['<img src="assets/img/icon/arrow-left.png"/>', '<img src="assets/img/icon/arrow-left.png"/>'],
+            navText: ['<img src="' + site_uri + '/assets/img/icon/arrow-left.png"/>', '<img src="' + site_uri + '/assets/img/icon/arrow-left.png"/>'],
             responsive: {
                 0: {
                     items: 2
@@ -324,8 +324,8 @@
         dots: false,
         arrows: true,
         fade: true,
-        prevArrow: '<span class="slick-prev"><img src="assets/img/icon/arrow-left-blue.png" alt="img" /></span>',
-        nextArrow: '<span class="slick-next"><img src="assets/img/icon/arrow-right-pink.png" alt="img" /></span>',
+        prevArrow: '<span class="slick-prev"><img src="' + site_uri + '/assets/img/icon/arrow-left-blue.png" alt="img" /></span>',
+        nextArrow: '<span class="slick-next"><img src="' + site_uri + '/assets/img/icon/arrow-right-pink.png" alt="img" /></span>',
         asNavFor: '.testimonial-thumb-slider'
     });
     $('.testimonial-thumb-slider').slick({

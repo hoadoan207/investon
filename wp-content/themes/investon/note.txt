@@ -1,0 +1,99 @@
+- remove: https://i.imgur.com/l5P3Mlx.png
+		https://i.imgur.com/4XK6t0r.png
+		https://i.imgur.com/WfFy7gl.png
+		https://i.imgur.com/r7I5Wsz.png
+		https://i.imgur.com/oeRZipr.png
+		https://i.imgur.com/xW7UV4b.png
+		https://i.imgur.com/7G35HCs.png
+- Form field: https://i.imgur.com/74YOy27.png
+- Add menu in backend
+- Sroll section when click menu
+- Menu: Home
+	Services
+	About
+	Clients
+	Contact
+	
+- Intro fields:
+	+ background image
+	+ image jump
+	+ subtitle
+	+ title
+	+ description
+	+ input placeholder
+	+ button text
+	
+- Service fields:
+	+ Repeater Box: ( max 3 ) 
+		- Icon
+		- Title
+		- Description
+		- Link
+	+ Input Placeholder
+	+ Button Text
+
+- Feature fields:
+	+ Subtitle
+	+ Title
+	+ Description
+	+ Image jump
+	+ Input placeholder
+	+ Button text
+	
+- Total fields
+	+ Box Repeater
+		- Icon
+		- Title
+		- Count number
+		
+- About fields
+	+ Subtitle
+	+ Title
+	+ Description
+	+ Link More Info
+	+ Link youtube
+	+ Repeter Box ( max 2 )
+		- Icon
+		- Title
+		- Description
+		- Link
+		
+- Profit fields
+	+ Box left
+		- Title
+		- Repeater field
+			+ Title
+			+ Input placeholder
+	+ Box right
+		- Title
+		- Description
+		- Repeater icon payment
+			+ Icon
+			+ Link
+	
+- Client fields
+	+ Title
+	+ Repeater client ( Max 4 )
+		- Title
+		- Feedback
+		- Name
+		- Career
+		- Avatar
+		
+- Contact fields
+	+ Title
+	+ Contact form
+	
+- Footer
+	+ Left Content
+		- Logo
+		- Description
+		- FB link
+		- Twitter link
+		- Linkedin link
+		- Pinteest link
+	+ Right Content
+		- Title
+		- Address
+		- Email
+		- Phone
