@@ -1,9 +1,9 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: Hoa Doan
- * Date: 26/03/2019
- * Time: 13:00
+ * Developer: hoadoan.dn207@gmail.com
+ * Date: 22/04/2020
+ * Time: 20:35
  */
 
 add_theme_support( 'post-thumbnails' );
