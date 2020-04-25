@@ -162,54 +162,19 @@
             <div class="logo">
                 <a href="index.html"> <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo-white.png" alt="logo"></a>
             </div>
+            <?php
+            $menu_items = wp_get_nav_menu_items("top-nav");
+            ?>
             <div class="collapse navbar-collapse" id="investon_main_menu">
                 <ul class="navbar-nav menu-open">
-                    <li class="menu-item-has-children current-menu-item">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li><a href="index.html"><i class="fa fa-long-arrow-right"></i>Home 01</a></li>
-                            <li><a href="home-2.html"><i class="fa fa-long-arrow-right"></i>Home 02</a></li>
-                            <li><a href="home-3.html"><i class="fa fa-long-arrow-right"></i>Home 03</a></li>
-                            <li><a href="home-consult.html"><i class="fa fa-long-arrow-right"></i>Home Consult</a></li>
-                            <li><a href="home-video.html"><i class="fa fa-long-arrow-right"></i>Home Video</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Investment</a>
-                        <ul class="sub-menu">
-                            <li><a href="investment.html"><i class="fa fa-long-arrow-right"></i>Investment Plan</a></li>
-                            <li><a href="investor.html"><i class="fa fa-long-arrow-right"></i>Investor</a></li>
-                            <li><a href="user-panel.html"><i class="fa fa-long-arrow-right"></i>User Panel</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Case Studies</a>
-                        <ul class="sub-menu">
-                            <li><a href="case.html"><i class="fa fa-long-arrow-right"></i>Case</a></li>
-                            <li><a href="case-details.html"><i class="fa fa-long-arrow-right"></i>Case Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">About Us</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="404.html"><i class="fa fa-long-arrow-right"></i>404</a></li>
-                            <li><a href="faq.html"><i class="fa fa-long-arrow-right"></i>faq</a></li>
-                            <li><a href="privacy.html"><i class="fa fa-long-arrow-right"></i>Privacy</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="blog.html"><i class="fa fa-long-arrow-right"></i>Blog</a></li>
-                            <li><a href="blog-details.html"><i class="fa fa-long-arrow-right"></i>Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
+                    <?php
+                        $i = 0;
+                        foreach ($menu_items as $item) { ?>
+                            <li class="menu-item-has-children <?php echo $i == 0  ? "current-menu-item" : "" ?>">
+                                <a href="<?php echo $item->url ?>"><?php echo $item->post_title ?></a>
+                            </li>
+                        <?php $i++; }
+                    ?>
                 </ul>
             </div>
             <ul class="right-part-search pr-0">
@@ -226,171 +191,24 @@
 <!-- navbar end -->
 
 <!-- banner area start -->
-<div class="banner-area-2">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="banner-inner text-center text-lg-left">
-                    <p class="subtitle">We have 24/7 supported team</p>
-                    <h2>Best Invest Company Scince 2011</h2>
-                    <p>look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
-                    <div class="single-input-wrap">
-                        <input placeholder="Inter your email address" type="text" class="single-input">
-                        <a class="btn btn-basic" href="#">Start Invest</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 align-self-center banner-thumb-wrap">
-                <div class="banner-thumb item-bounce text-center d-none d-lg-block">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/banner/02.png" alt="banner">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include "template/intro-area.php" ?>
 <!-- banner area end -->
 
 <!-- work area start -->
-<div class="work-area common-pd-2 bg-none">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-4 col-md-6">
-                <div class="single-work text-center mg-top-180">
-                    <span class="common-icon-circle bg-smile-green"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/01.png" alt="icon"></span>
-                    <h4><a href="#">OPEN AN ACCOUNT</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consect adipisc elit. Proin ultricies vestibulum vebiben</p>
-                    <a class="btn btn-plus" href="#"><i class="fa fa-plus"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-work text-center">
-                            <span class="common-icon-circle bg-pink"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/02.png" alt="icon"></span>
-                            <h4><a href="#">Give Interest</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consect adipisc elit. Proin ultricies vestibulum vebiben</p>
-                            <a class="btn btn-plus" href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single-work text-center">
-                            <span class="common-icon-circle bg-yellow"><img src="<?php echo get_template_directory_uri() ?>/assets/img/icon/04.png" alt="icon"></span>
-                            <h4><a href="#">Get Deposit</a></h4>
-                            <p>Lorem ipsum dolor sit amet, consect adipisc elit. Proin ultricies vestibulum vebiben</p>
-                            <a class="btn btn-plus" href="#"><i class="fa fa-plus"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12 mb-5 mb-mg-0">
-                        <div class="single-input-wrap text-center text-lg-right">
-                            <input placeholder="Oppen an account - enter you email" type="text" class="single-input">
-                            <a class="btn btn-basic" href="#">GO ON</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include "template/service-area.php" ?>
 <!-- work area end -->
 
 <!-- featured area start -->
-<div class="featured-area left-line-bg common-pd-bottom-3" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/pen.png);">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-7 col-md-9 text-lg-left text-center">
-                <div class="section-title">
-                    <h5 class="subtitle"><span></span>Invest Now</h5>
-                    <h3 class="title">Get Featured!</h3>
-                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many</p>
-                </div>
-                <div class="single-input-wrap">
-                    <input placeholder="Inter your email address" type="text" class="single-input">
-                    <a class="btn btn-basic" href="#">Start Invest</a>
-                </div>
-            </div>
-            <div class="col-lg-5 col-6 align-self-center banner-thumb-wrap">
-                <div class="thumb item-bounce">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/feature/02.png" alt="img">
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include "template/feature-area.php" ?>
 <!-- featured area end -->
 
 <div class="shape-4" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/4.png);">
     <!-- fact-count area start -->
-    <div class="fact-count-area common-pd-bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-fact-count text-center">
-                        <div class="thumb">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/fact/01.png" alt="icon">
-                        </div>
-                        <h4 class="fact-title">Total Members</h4>
-                        <h2 class="counter">54,535</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-fact-count text-center">
-                        <div class="thumb">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/fact/01.png" alt="icon">
-                        </div>
-                        <h4 class="fact-title">Total Members</h4>
-                        <h2 class="counter">54,535</h2>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-fact-count text-center">
-                        <div class="thumb">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/fact/02.png" alt="icon">
-                        </div>
-                        <h4 class="fact-title">Total Members</h4>
-                        <h2 class="counter">54,535</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include "template/total-area.php" ?>
     <!-- fact-count area end -->
 
     <!-- video-area start -->
-    <div class="video-area-2 common-pd-bottom right-line-bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/pen-2.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 align-self-center">
-                    <div class="section-title">
-                        <h5 class="subtitle"><span></span>Who We Are?</h5>
-                        <h3 class="title">About details</h3>
-                        <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                    </div>
-                    <a class="btn btn-basic top-right-radius-0" href="#">Find Out More</a>
-                    <a class="video-play-btn" href="https://www.youtube.com/embed/Wimkqo8gDZ0" data-effect="mfp-zoom-in"><i class="fa fa-play"></i></a>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-about text-center bg-gradient">
-                        <div class="thumb">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/process/01.png" alt="icon">
-                        </div>
-                        <h5><a href="#">Licensed & Certified</a></h5>
-                        <p>We are ipsum dolor sit amet, ctetursadipiscing elit dunt ut labore et doloremagna</p>
-                        <a class="btn btn-plus" href="#"><i class="fa fa-plus"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <div class="single-about text-center bg-purple">
-                        <div class="thumb">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/process/01.png" alt="icon">
-                        </div>
-                        <h5><a href="#">Saving & Investments</a></h5>
-                        <p>We are ipsum dolor sit amet, ctetursadipiscing elit dunt ut labore et doloremagna</p>
-                        <a class="btn btn-plus" href="#"><i class="fa fa-plus"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php include "template/about-area.php" ?>
     <!-- video-area end -->
 </div>
 
@@ -965,160 +783,10 @@
 <!-- blog-area end -->
 
 <!-- check-profit-area start -->
-<div class="check-profit-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <form>
-                    <div class="title text-center">
-                        <h5>Calculate Your Profit</h5>
-                    </div>
-                    <div class="form-group">
-                        <label>Enter Ammount :</label>
-                        <input type="number" placeholder="$20" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Total Profit :</label>
-                        <input type="number" placeholder="$16" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label>Net Profit :</label>
-                        <input type="number" placeholder="$06" class="form-control">
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-6 align-self-center">
-                <div class="payment-method-wrap">
-                    <h2>We Accepted these Payment Method</h2>
-                    <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
-                    <ul class="payment-card">
-                        <li>
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/payment-card/01.png" alt="img"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/payment-card/05.png" alt="img"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/payment-card/02.png" alt="img"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/payment-card/03.png" alt="img"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/payment-card/04.png" alt="img"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/payment-card/06.png" alt="img"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php include "template/profit-area.php" ?>
 <!-- check-profit-area end -->
 
-<div class="shape-3" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/3.png);">
-    <!-- testimonial-area start -->
-    <div class="testimonial-area pd-top-80 common-pd-bottom left-bottom-line-bg" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/pen.png);">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="testimonial-main-slider">
-                        <div class="item">
-                            <div class="single-main-client">
-                                <div class="section-title text-lg-left text-center">
-                                    <h5 class="subtitle"><span></span>Top Clients</h5>
-                                    <h3 class="title">Hoa Doan</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        as opposed to using.</p>
-                                </div>
-                                <div class="client-info text-lg-left text-center">
-                                    <h6>Cron Mickey</h6>
-                                    <p>Investor</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="single-main-client">
-                                <div class="section-title text-lg-left text-center">
-                                    <h5 class="subtitle"><span></span>Top Clients</h5>
-                                    <h3 class="title">Tri Truong</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        as opposed to using.</p>
-                                </div>
-                                <div class="client-info text-lg-left text-center">
-                                    <h6>Cron Mickey</h6>
-                                    <p>Investor</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="single-main-client">
-                                <div class="section-title text-lg-left text-center">
-                                    <h5 class="subtitle"><span></span>Top Clients</h5>
-                                    <h3 class="title">Trump</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        as opposed to using.</p>
-                                </div>
-                                <div class="client-info text-lg-left text-center">
-                                    <h6>Cron Mickey</h6>
-                                    <p>Investor</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="single-main-client">
-                                <div class="section-title text-lg-left text-center">
-                                    <h5 class="subtitle"><span></span>Top Clients</h5>
-                                    <h3 class="title">Tap Can Binh</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                                        as opposed to using.</p>
-                                </div>
-                                <div class="client-info text-lg-left text-center">
-                                    <h6>Cron Mickey</h6>
-                                    <p>Investor</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 align-self-center">
-                    <div class="testimonial-thumb-slider-wrap">
-                        <img class="testimonial-thumb-slider--img testimonial-thumb-slider--img-1" src="<?php echo get_template_directory_uri() ?>/assets/img/team/01.png" alt="img">
-                        <img class="testimonial-thumb-slider--img testimonial-thumb-slider--img-2" src="<?php echo get_template_directory_uri() ?>/assets/img/team/02.png" alt="img">
-                        <img class="testimonial-thumb-slider--img testimonial-thumb-slider--img-3" src="<?php echo get_template_directory_uri() ?>/assets/img/team/03.png" alt="img">
-                        <img class="testimonial-thumb-slider--img testimonial-thumb-slider--img-4" src="<?php echo get_template_directory_uri() ?>/assets/img/team/04.png" alt="img">
-
-                        <div class="testimonial-thumb-slider-img testimonial-thumb-slider">
-                            <div class="item">
-                                <div class="single-thumb-client">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/team/01.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="single-thumb-client">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/team/02.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="single-thumb-client">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/team/03.png" alt="img">
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="single-thumb-client">
-                                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/team/03.png" alt="img">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- testimonial-area end -->
-</div>
+<?php include "template/client-area.php" ?>
 
 <div class="shape-5 remove-temp" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/5.png);">
     <!-- client area start -->
@@ -1151,7 +819,7 @@
 </div>
 
 <!-- subscribe area start -->
-<div class="subscribe-area bg-gray common-pd-subscribe text-center text-sm-left">
+<div id="contact" class="subscribe-area bg-gray common-pd-subscribe text-center text-sm-left">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 align-self-center">
@@ -1196,63 +864,5 @@
     </div>
 </div>
 <!-- subscribe area end -->
-
-<!-- footer area start -->
-<footer class="footer-area">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-sm-12">
-                    <div class="footer-widget widget widget-about-us">
-                        <a href="index.html" class="footer-logo">
-                            <img src="<?php echo get_template_directory_uri() ?>/assets/img/logo.png" alt="footer logo">
-                        </a>
-                        <p>like readable English. Many desktop publishing packages and web page editors now use lorem Ipsum sites still in their</p>
-                        <ul class="footer-social social-area-2">
-                            <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-sm-12">
-                    <div class="footer-widget widget contact-widget">
-                        <h4 class="widget-title">Contact Us <span class="dot">.</span></h4>
-                        <p>301, Main road MD, OP 432 Caron Town. Office No 1234</p>
-                        <p>info@example.com</p>
-                        <p>834-5825882763</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom remove-temp">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 text-lg-left text-center">
-                    <ul class="footer-menu">
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Recent</a></li>
-                        <li><a href="#">Privecy</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Investment</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-5 text-center text-lg-right">
-                    <p class="copyright">@ 2019, templates7theme . all right reserved</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- footer area end -->
-
-<!-- back to top area start -->
-<div class="back-to-top">
-    <span class="back-top"><i class="fa fa-angle-up"></i></span>
-</div>
-<!-- back to top area end -->
 
 <?php get_footer(); ?>

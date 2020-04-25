@@ -289,7 +289,7 @@
                 youtube: {
                     index: 'youtube.com/',
                     id: 'v=',
-                    src: 'https://www.youtube.com/embed/ttv0ApD4wtw'
+                    src: link_youtube ? link_youtube : 'https://www.youtube.com/embed/ttv0ApD4wtw'
                 }
             }
         }
