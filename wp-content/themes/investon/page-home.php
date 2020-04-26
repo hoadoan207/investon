@@ -782,10 +782,6 @@
 </div>
 <!-- blog-area end -->
 
-<!-- check-profit-area start -->
-<?php include "template/profit-area.php" ?>
-<!-- check-profit-area end -->
-
 <?php include "template/client-area.php" ?>
 
 <div class="shape-5 remove-temp" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/shape/5.png);">
@@ -818,8 +814,12 @@
     <!-- client area end -->
 </div>
 
+<!-- check-profit-area start -->
+<?php include "template/profit-area.php" ?>
+<!-- check-profit-area end -->
+
 <!-- subscribe area start -->
-<div id="contact" class="subscribe-area bg-gray common-pd-subscribe text-center text-sm-left">
+<div class="subscribe-area bg-gray common-pd-subscribe text-center text-sm-left remove-temp">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 align-self-center">

@@ -7,23 +7,27 @@
         $description = get_sub_field('description');
         $icons = get_sub_field('icons');
         ?>
-        <div class="check-profit-area">
+        <div id="contact" class="check-profit-area">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
-                        <form>
-                            <div class="title text-center">
-                                <h5><?php echo $l_title ?>></h5>
-                            </div>
-                            <?php
-                                foreach ($fields as $field) { ?>
-                                    <div class="form-group">
-                                        <label><?php echo $field["title"] ?></label>
-                                        <input type="number" placeholder="<?php echo $field["input_placeholder"] ?>" class="form-control">
-                                    </div>
-                                <?php }
-                            ?>
-                        </form>
+<!--                        <form>-->
+<!--                            <div class="title text-center">-->
+<!--                                <h5>--><?php //echo $l_title ?><!--</h5>-->
+<!--                            </div>-->
+<!--                            --><?php
+//                                foreach ($fields as $field) { ?>
+<!--                                    <div class="form-group">-->
+<!--                                        <label>--><?php //echo $field["title"] ?><!--</label>-->
+<!--                                        <input type="number" placeholder="--><?php //echo $field["input_placeholder"] ?><!--" class="form-control">-->
+<!--                                    </div>-->
+<!--                                --><?php //}
+//                            ?>
+<!--                        </form>-->
+                        <div id="contact-title" class="title text-center">
+                            <h5><?php echo $l_title ?></h5>
+                        </div>
+                        <?php echo do_shortcode("[contact-form-7 id=\"134\" title=\"Contact form 1\"]") ?>
                     </div>
                     <div class="col-lg-6 align-self-center">
                         <div class="payment-method-wrap">

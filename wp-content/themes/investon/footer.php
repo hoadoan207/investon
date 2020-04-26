@@ -100,6 +100,8 @@
         $('html').animate({ scrollTop: $anchor.top });
         return false;
     });
+
+    $("#contact-title").prependTo(".wpcf7-form");
 </script>
 
 </body>

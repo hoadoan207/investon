@@ -13,3 +13,9 @@ function add_slug_body_class() {
     return $post->post_name;
 }
 add_filter( 'body_class', 'add_slug_body_class' );
+
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+    return $content;
+});
